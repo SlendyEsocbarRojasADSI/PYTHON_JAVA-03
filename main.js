@@ -1,15 +1,21 @@
-let numtraba= Number(prompt("Ingresar el numero de trabajadores:"));
-let cont= 1;
-let comi= 0;
+let mateFunda= Number(prompt("Digitar los creditos de la materia fundamentos:"));
+let mateBd= Number(prompt("Digitar los creditos de la materia BD:"));
+let mateEti= Number(prompt("Digitar los creditos de la materia etica:"));
+let cantiEstu= Number(promt("Digitar la cantidad de estudiantes:"));
 
-while(cont<=numtraba){
-    let sueldo= Number(prompt("Ingresar el sueldo del trabajador"));
-    let vent1= Number(prompt("Ingresar la primera venta:"));
-    let vent2= Number(prompt("Ingresar la segunda venta:"));
-    let vent3= Number(prompt("Ingresar la tercera venta:"));
+while (cont<=cantiEstu){
+    let caliFunda= int(prompt("Ingresar la calificacion de la materia de fundamentos:"));
+    let caliBd= int(prompt("Ingresar la calificacion de la materia BD:"));
+    let caliEti= int(prompt("Ingresar la calificacion de la materia etica:"));
 
-    comi= (vent1+vent2+vent3)*0.10;
+    let mate1= caliFunda*mateFunda;
+    let mate2= caliBd*mateBd;
+    let mate3= caliEti*mateEti;
 
-    alert("El trabajador tiene un sueldo mensual de" +sueldo+ "con una comision mensual de" +comi);
-    alert("El sueldo total mas la comision es de" +(sueldo+comi));
+    let sumCredi= mateFunda+mateBd+mateEti;
+    let ponderacion= (mate1+mate2+mate3)/sumCredi;
+
+    alert("Su promedio ponderado es de:" +ponderacion);
+
+    cont+=1;
 }
