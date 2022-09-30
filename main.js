@@ -1,18 +1,14 @@
-let cont=0;
+let cont=1;
 
-while (cont<=10){
-    let num1= Number(prompt("Escribir el primer numero:"));
-    let num2= Number(prompt("Escribir el segundo numero:"));
+while (cont<=5){
+    let nom= prompt("Escribir el nombre del estudiante:");
+    let ape= prompt("Escribir el apellido del estudiante:");
+    let edad= Number(prompt("Escribir la edad del estudiante:"));
 
-    let sum= num1+num2;
-    alert("El resultado de la suma es de:" +sum);
+    let nota1= Number(prompt("Escribe la primera nota del estudiante:"));
+    let nota2= Number(prompt("Escribe la segunda nota del estudiante:"));
 
-    let rest= num1-num2;
-    alert("El resultado de la resta es de:" +rest);
-
-    let multi= num1*num2;
-    alert("El resultadi de la multiplicacion es de:" +multi);
-
-    let divi= num1/num2;
-    alert("El resultado de la division es de:" +divi);
+    let prome= (nota1+nota2)/2;
+    alert("El estudiante" +nom+ape+ "su edad es de" +edad+ "tiene una nota promedio de" +prome);
+    cont+=1;
 }
