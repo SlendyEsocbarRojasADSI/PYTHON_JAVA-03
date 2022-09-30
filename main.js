@@ -1,32 +1,22 @@
-let vehi= 4;
-let turi= 0;
-let pert= 0;
-let autobu= 0;
-let cami= 0;
-let moto= 0;
 let cont= 1;
+let cantiVehi= Number(prompt("Ingresar la cantidad de vehiculos que ingresaron a Bogota:"));
 
-while (cont<=vehi){
-    let tipoVehi= prompt("Ingresar el tipo de vehiculo que sta pasando (turismo, autobus, camion o motocicleta):");
-    cont+=1;
+while (cont<=cantiVehi){
+    let placa= Number(prompt("Digitar el ultimo digito de la placa del vehiculo:"));
 
-    if (tipoVehi=="turismo"){
-        let  per= int(input("Ingresar Cantidad de personas:"));
-        turi+=1
-        pert=per+pert
+    if (placa==1 && placa==2){
+        alert("La calcomania es amarrilla");
+    } else if (placa==4 && placa==4){
+        alert("La calcomania es rosa");
     }
-    if (tipoVehi=="autobus"){
-        autobu+=1
+    if (placa==5 && placa==6){
+        alert("La calcomania es roja");
+    } else if(placa==7 && placa==8){
+        alert("La calcomania es verde");
     }
-    if (tipoVehi=="camion"){
-        cami+=1
+    if (placa==8 && placa==9){
+        alert("La calcomania es azul");
+    }else{
+        alert("Error al digitar la placa");
     }
-    else{
-        moto+=1
-    }
-    alert("La cantidad de autobuses:" +autobu);
-    alert("La cantidad de camiones:" +cami);
-    alert("La cantidad de motocicletas:" +moto);
-    alert("La cantidad de turismo:" +turi);
-    alert("La cantidad de personas en vehiculos de turismo son:" +pert);
 }
